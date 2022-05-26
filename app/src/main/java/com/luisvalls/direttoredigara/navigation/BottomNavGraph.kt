@@ -4,9 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.luisvalls.direttoredigara.screens.Amministratore.EditEvent
-import com.luisvalls.direttoredigara.screens.Amministratore.EventsRegistered
-import com.luisvalls.direttoredigara.screens.Amministratore.MenuGestion
+import com.luisvalls.direttoredigara.screens.Amministratore.*
 import com.luisvalls.direttoredigara.screens.Utente.MenuUsers
 import com.luisvalls.direttoredigara.screens.Utente.ScreenViewEvents
 
@@ -25,10 +23,10 @@ fun BottomNavGraph(navController: NavHostController) {
             MenuUsers()
         }
         composable(route = Screen.AddDispositive.route) {
-            MenuUsers()
+            AddDispositive(navController = navController)
         }
         composable(route = Screen.AddEvent.route) {
-            MenuUsers()
+            AddEvent(navController)
         }
         composable(route = Screen.EditEvent.route) {
             EditEvent(navController)
@@ -49,6 +47,15 @@ fun BottomNavGraph(navController: NavHostController) {
         }
         composable(route = Screen.MenuGestion.route) {
             MenuGestion(navController = navController)
+        }
+        composable(route = Screen.ListDispositives.route) {
+            ListDispositives(navController = navController)
+        }
+        composable(route = Screen.EditDispositives.route) {
+            EditDispositive(navController = navController)
+        }
+        composable(route = Screen.CurrentEventMenu.route) {
+            CurrentEventMenu(navController = navController)
         }
 
 

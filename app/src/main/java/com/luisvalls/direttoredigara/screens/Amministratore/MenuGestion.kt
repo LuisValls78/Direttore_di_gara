@@ -7,8 +7,10 @@ import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -20,11 +22,11 @@ fun MenuGestion(
     navController: NavController,
 
     ) {
-    Column() {
+    Column(horizontalAlignment = Alignment.CenterHorizontally) {
         Text(
             text = "MENU GESTION",
-            fontSize = 15.sp,
-            //fontFamily = Poppins,
+            fontSize = 25.sp,
+            fontWeight = FontWeight.Bold,
             color = Color.Black,
             textAlign = TextAlign.Center,
             modifier = Modifier
@@ -32,14 +34,14 @@ fun MenuGestion(
                 .fillMaxWidth()
         )
 
-        Spacer(modifier = Modifier.size(8.dp))
+        Spacer(modifier = Modifier.size(60.dp))
 
         Button(
             onClick = {
-                navController.navigate(route = Screen.ScreenViewEvents.route)
+                navController.navigate(route = Screen.EventsRegistered.route)
 
             },
-            shape = RoundedCornerShape(10.dp, 10.dp, 0.dp, 0.dp),
+            //shape = RoundedCornerShape(10.dp, 10.dp, 0.dp, 0.dp),
             modifier = Modifier.width(160.dp),
             colors = ButtonDefaults.buttonColors(backgroundColor = Color.White),
             border = BorderStroke(1.dp, Color.Black),
@@ -56,20 +58,43 @@ fun MenuGestion(
             )
         }
 
-        Spacer(modifier = Modifier.size(8.dp))
+        Spacer(modifier = Modifier.size(50.dp))
 
         Button(
             onClick = {
-                navController.navigate(route = Screen.AddDispositive.route)
+                navController.navigate(route = Screen.ListDispositives.route)
 
             },
-            shape = RoundedCornerShape(10.dp, 10.dp, 0.dp, 0.dp),
+           // shape = RoundedCornerShape(10.dp, 10.dp, 0.dp, 0.dp),
             modifier = Modifier.width(160.dp),
             colors = ButtonDefaults.buttonColors(backgroundColor = Color.White),
             border = BorderStroke(1.dp, Color.Black),
         ) {
             Text(
                 text = "Gestionar dispositivos",
+                fontSize = 15.sp,
+                //fontFamily = Poppins,
+                color = Color.Black,
+                textAlign = TextAlign.Center,
+                modifier = Modifier
+                    .padding(top = 30.dp)
+                    .fillMaxWidth()
+            )
+        }
+        Spacer(modifier = Modifier.size(50.dp))
+
+        Button(
+            onClick = {
+                navController.navigate(route = Screen.CurrentEventMenu.route)
+
+            },
+            // shape = RoundedCornerShape(10.dp, 10.dp, 0.dp, 0.dp),
+            modifier = Modifier.width(160.dp),
+            colors = ButtonDefaults.buttonColors(backgroundColor = Color.White),
+            border = BorderStroke(1.dp, Color.Black),
+        ) {
+            Text(
+                text = "Gestionar evento en curso",
                 fontSize = 15.sp,
                 //fontFamily = Poppins,
                 color = Color.Black,

@@ -6,6 +6,10 @@ sealed class Screen(val route: String) {
     object EditEvent : Screen("editevent")
     object EventsRegistered : Screen("eventsregistered")
     object MenuGestion : Screen("menugestion")
+    object ListDispositives: Screen("listdispositives")
+    object EditDispositives: Screen("editdispositives")
+    object CurrentEventMenu: Screen("currenteventmenu")
+
 
     object MenuUsers : Screen("menusuers")
     object ScreenMarkers : Screen("marcadores")

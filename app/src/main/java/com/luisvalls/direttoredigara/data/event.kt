@@ -1,4 +1,9 @@
 package com.luisvalls.direttoredigara.data
 
-class event {
+data class event(
+    val id: String,
+    val nombre: String
+
+) {
+    constructor(): this("","")
 }

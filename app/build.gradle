@@ -62,4 +62,11 @@ dependencies {
 
     //navegación
     implementation("androidx.navigation:navigation-compose:2.4.1")
+
+    //Map
+    implementation 'com.google.maps.android:maps-compose:1.0.0'
+    implementation 'com.google.android.gms:play-services-maps:18.0.2'
+    //icons
+    implementation "androidx.compose.material:material-icons-extended:$compose_version"
+
 }

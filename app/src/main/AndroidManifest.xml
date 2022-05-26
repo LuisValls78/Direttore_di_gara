@@ -13,6 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DirettoreDiGara"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC40-Om9COOuwy0pFPgimCd3RQAw0baChs"
+            />
         <activity
             android:name=".MainActivity"
             android:exported="true"
